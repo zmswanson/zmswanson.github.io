@@ -1,29 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-.w3-sidenav a,.w3-sidenav h4 {padding: 12px;}
-.w3-navbar li a {
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-</style>
-<title>Zach Swanson Homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Zach Swanson Homepage</title>
 </head>
 
-<body>
-    <h1>Zach's Website Under Construction</h1>
-    <h2>STM32 Bluepill: Lessons Learned</h2>
-    <p>I'm able to use one of my other STM32 development boards with embedded STLINK programmer to program the Bluepill. I have to remove both CN2 jumpers and connect CN4 header to Bluepill SWD header. My knockoff ST-Link V2 is broken. I should throw it away but I can't bring myself to throw away electronics.</p>
-    <p>When working with System Workbench for STM32, I had to change the Run/Debug configuration "Reset Mode" option to "Software system restart". I don't have to worry about pressing reset on the Bluepill when I do this. I also ran into issues with programming the device when I had the "Shareable ST-Link" option selected in the Run/Debug configuration.</p>
-    <p>I've been doing this work using System Workbench for STM32 on Macbook Pro and I like to use the Standard Peripheral Library, which led to issues when trying to download the target firmwares. The solution was to modify the file "Applications/AC6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.ide_2.9.0.201904120827/resources/board_def/stm32targets.xml" to include a new server <url>https://www.st.com/resource/en/firmware2/</url> under <servers> near the top of the file. This url was found in a HTTP redirect message via WireShark that the download function obviously doesn't handle well.</p>
-    <p>STM32 Bluepill boot pin jumpers: If you are using SWD for programming, then Boot 0 = 0 and Boot 1 = 0 (this directly programs flash memory). If you are using USART1 for programming, then Boot 0 = 1 and Boot 1 = 0 (loads the bootloader on boot enabling programming via USART). For whatever reason, it took a lot of google searches to find a clear answer on that. Even then I had to reference the manual to really understand.</p>
+<body style="background-color: black; color: whitesmoke;">
+    <div class="container">
+        <h1>Zach's Website Under Construction</h1>
+        <b></b>
+        <b></b>
+        <div class="panel-group" id="accordion">
+            <H1>Education History</H1>
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color: rgb(227,25,25);">
+                    <div class="row align-middle justify-content-center">
+                        <div class="col-sm-1">
+                            <a href="https://engineering.unl.edu/ece/">
+                                <img src="static/unl_symbol.jpg" class="ratio img-responsive img-circle" style="max-width: 75%;" alt="UNL">
+                            </a>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <h2 class="panel-title" style="color: white; font-weight: bold;">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1a">University of Nebraska-Lincoln</a>
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <h3 class="panel-title" style="color: white; ">B.S. Electrical and Computer Engineering (2018)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapse1a" class="panel-collapse collapse">
+                    <div class="panel-body" style="color: black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color: rgb(251,121,0);">
+                    <div class="row align-middle justify-content-center">
+                        <div class="col-sm-1">
+                            <a href="https://www.doane.edu/programs/physics">
+                                <img src="static/doane_symbol.jpg" class="ratio img-responsive img-circle" style="max-width: 75%;" alt="Doane">
+                            </a>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <h2 class="panel-title" style="color: white; font-weight: bold;">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1b">Doane College</a>
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <h3 class="panel-title" style="color: white; ">B.S. Physics (2016)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapse1b" class="panel-collapse collapse">
+                    <div class="panel-body" style="color: black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</div>
+                </div>
+            </div>
+
+            <h1>Employment History</h1> 
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color: blue;">
+                    <div class="row align-middle justify-content-center">
+                        <div class="col-sm-1">
+                            <a href="https://www.reinke.com/precision-ag.html">
+                                <img src="static/reinke_symbol.jpg" class="ratio img-responsive img-circle" style="max-width: 75%;" alt="RMCI">
+                            </a>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <h2 class="panel-title" style="color: white; font-weight: bold;">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2a">Reinke Manufacturing Company, Inc.</a>
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <h3 class="panel-title" style="color: white; ">Electrical Design Engineer (2021-Present)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapse2a" class="panel-collapse collapse">
+                    <div class="panel-body" style="color: black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color: rgb(66, 66, 66);">
+                    <div class="row align-middle justify-content-center">
+                        <div class="col-sm-1">
+                            <a href="https://www.rbinv.io">
+                                <img src="static/redberry_symbol.png" class="ratio img-responsive img-circle" style="max-width: 75%;" alt="RBI">
+                            </a>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <h2 class="panel-title" style="color: white; font-weight: bold;">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2b">Red Berry Innovations, Inc.</a>
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <h3 class="panel-title" style="color: white; ">Lead Cyber Engineer (2019-2021)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapse2b" class="panel-collapse collapse">
+                    <div class="panel-body" style="color: black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color: red;">
+                    <div class="row align-middle justify-content-center">
+                        <div class="col-sm-1">
+                            <a href="https://jeo.com/disciplines/power-and-electric">
+                                <img src="static/jeo_symbol.png" class="ratio img-responsive img-circle" style="max-width: 75%;" alt="JEO">
+                            </a>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <h2 class="panel-title" style="color: white; font-weight: bold;">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2c">JEO Consulting Group, Inc.</a>
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <h3 class="panel-title" style="color: white; ">Electrical Engineer (2016-2019)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapse2c" class="panel-collapse collapse">
+                    <div class="panel-body" style="color: black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</div>
+                </div>
+            </div>
+        </div>
+
+        <h1>Blog Posts</h1>
+        <h2>STM32 Bluepill: Lessons Learned</h2>
+        <p>I'm able to use one of my other STM32 development boards with embedded STLINK programmer to program the Bluepill. I have to remove both CN2 jumpers and connect CN4 header to Bluepill SWD header. My knockoff ST-Link V2 is broken. I should throw it away but I can't bring myself to throw away electronics.</p>
+        <p>When working with System Workbench for STM32, I had to change the Run/Debug configuration "Reset Mode" option to "Software system restart". I don't have to worry about pressing reset on the Bluepill when I do this. I also ran into issues with programming the device when I had the "Shareable ST-Link" option selected in the Run/Debug configuration.</p>
+        <p>I've been doing this work using System Workbench for STM32 on Macbook Pro and I like to use the Standard Peripheral Library, which led to issues when trying to download the target firmwares. The solution was to modify the file "Applications/AC6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.ide_2.9.0.201904120827/resources/board_def/stm32targets.xml" to include a new server <url>https://www.st.com/resource/en/firmware2/</url> under <servers> near the top of the file. This url was found in a HTTP redirect message via WireShark that the download function obviously doesn't handle well.</p>
+        <p>STM32 Bluepill boot pin jumpers: If you are using SWD for programming, then Boot 0 = 0 and Boot 1 = 0 (this directly programs flash memory). If you are using USART1 for programming, then Boot 0 = 1 and Boot 1 = 0 (loads the bootloader on boot enabling programming via USART). For whatever reason, it took a lot of google searches to find a clear answer on that. Even then I had to reference the manual to really understand.</p>
+
+    </div>
 </body>
+</html>
