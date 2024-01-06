@@ -4,5 +4,3 @@
 
 layout: home
 ---
-
-Welcome! Just getting up and running with Jekyll.
