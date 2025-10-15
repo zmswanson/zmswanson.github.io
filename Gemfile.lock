@@ -258,7 +258,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.12)
-  minima (~> 2.5)
+  jekyll-remote-theme
   webrick (~> 1.8)
 
 BUNDLED WITH
