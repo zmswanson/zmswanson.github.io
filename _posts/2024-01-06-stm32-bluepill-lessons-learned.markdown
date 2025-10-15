@@ -4,7 +4,7 @@ title:  "STM32 Bluepill Lessons Learned"
 date:   2024-01-06 13:17:00 -0600
 categories: stm32 embedded development
 ---
-![image tooltip here](/assets/bluepill.jpg)
+![Bluepill Diagram](/assets/images/bluepill.jpg)
 
 The STM32-based "Blue Pill" development board was a board I came across while working on my senior
 design project at UNL in 2017-2018. The board was selected because we were required to develop our
