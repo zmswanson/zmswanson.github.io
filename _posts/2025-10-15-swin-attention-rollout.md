@@ -30,7 +30,12 @@ introducing **shifted windows** between alternating layers to create connections
 These shifts allow neighboring regions to exchange information without the full cost of global
 attention.
 
-![Swin Window Diagram](/assets/images/swin_attention_diagram.png){: .center }
+<!-- ![Swin Window Diagram](/assets/images/swin_attention_diagram.png){: .center } -->
+<p style="text-align:center;">
+  <img src="/assets/images/swin_attention_diagram.png"
+       alt="Swin Window Diagram"
+       style="display:block;margin:1.5rem auto;max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
+</p>
 
 This shifted-window mechanism forms the basis of a **hierarchical transformer**, where deeper stages
 merge tokens into coarser representations, producing multi-scale features similar to CNN feature
@@ -44,12 +49,14 @@ care is required to accurately rollout the attention scores for visualization. F
 video demonstrates how shifting the window and downsampling modify the attention matrix, which
 further necessitates the need for special functionality for attention rollout.
 
-<figure style="text-align:center;">
-  <video controls autoplay loop muted playsinline width="800">
+<div style="position:relative;width:100%;max-width:900px;margin:1.5rem auto;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+  <video controls autoplay loop muted playsinline
+         style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:8px;">
     <source src="/assets/videos/swin_attention_rollout.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-</figure>
+</div>
+
 
 ---
 
